@@ -1,0 +1,25 @@
+
+.TvcPlayWrapper:nth-child(2n+1){
+    background-color: #191919;
+}
+.TvcPlayWrapper:nth-child(2n+1) .contenedorSlidesImage{
+    background-color:#0c0c0c;
+    border-radius: 0 0 0 50px;
+}
+
+.TvcPlayWrapper:nth-child(2n){
+    background: #0c0c0c;
+}
+.TvcPlayWrapper:nth-child(2n) .contenedorSlidesImage{
+    border-radius: 0 0 0 50px;
+    background: #191919;
+}
+
+.alert-button.sc-ion-alert-md{
+    display: flex;
+    flex: 1;
+}
+
+.alert-button-inner.sc-ion-alert-md{
+    justify-content: center;
+}
