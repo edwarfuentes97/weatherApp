@@ -12,7 +12,7 @@ type response = {
 }
 
 export interface IUseApi {
-    getWeatherData:() => void,
+    getWeatherData:(city:string) => void,
     homeData: any
 }
 
@@ -32,8 +32,10 @@ function useApi() {
     }
 
     /*Metodo  para obtener los resultados de una busqueda*/
-    const getWeatherData = () => {
-        const url = `${process.env["REACT_APP_BASE"]}?id=${process.env["REACT_APP_CITY_ID_BOGOTA"]}&appid=${process.env["REACT_APP_API_KEY"]}`;
+    const getWeatherData = (city:string) => {
+        let ciudad =  city === 'bogota' ?  process.env["REACT_APP_CITY_ID_BOGOTA"] : process.env["REACT_APP_CITY_ID_PARIS"];
+
+        const url = `${process.env["REACT_APP_BASE"]}?id=${ciudad}&appid=${process.env["REACT_APP_API_KEY"]}`;
         getData(url).then((data:any) => {
             if (data) {
                 setHomeData(data);

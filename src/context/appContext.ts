@@ -4,7 +4,7 @@ import { IUseApi } from '../hooks/useApi';
 
 
 const apiHook: IUseApi = {
-    getWeatherData:() => {},
+    getWeatherData:(city:string) => {},
     homeData : [],
 }
 

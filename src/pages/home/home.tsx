@@ -12,12 +12,12 @@ interface Menu {
 
 const HomePage: React.FC<ContainerProps> = () => {
 
-  const { getWeatherData , homeData   } = useContext(appContext)
+  const { getWeatherData , homeData } = useContext(appContext)
   const [update, setUpdate] = useState(false);
 
 
   useEffect(() => {
-    getWeatherData();
+    getWeatherData('bogota');
     // eslint-disable-next-line
   }, [update]);
 
@@ -29,10 +29,15 @@ const HomePage: React.FC<ContainerProps> = () => {
 
   return (
     <>
-      <p>Pagina principal </p>
-      <button onClick={fnReload} >Actualizar</button>
-      <hr/>
-      <code>{JSON.stringify(homeData)}</code>
+      {
+        homeData ? <>
+            <p>Pagina principal </p>
+            <button onClick={fnReload} >Actualizar</button>
+            <hr/>
+            <code>{JSON.stringify(homeData)}</code>
+          </>:
+          <p>Cargando</p>
+      }
     </>
   );
 };
