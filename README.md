@@ -10,6 +10,8 @@
 
 <li> La configuracion de rutas apis y keys se encuentra centralizada en el archivo .env de proyuecto</li>
 
+<li> <b>Para iniciar el proyecto es necesario usar el comando <code>npm start</code> </b></li>
+
 <hr>
 
 <h3>api for weather </h3>
