@@ -1,5 +1,17 @@
 ## GradiWeb
 
+<h4> Importante</h4>
+
+<li>Esta aplicacion fue creada con npx create-react-app</li>
+
+<li> Para correr esta app es necesario instalar node y el gestor de paquetes npm </li>
+
+<li> una ves clonada el app es necesario realizar el comando npm install / yarn install</li>
+
+<li> La configuracion de rutas apis y keys se encuentra centralizada en el archivo .env de proyuecto</li>
+
+<hr>
+
 <h3>api for weather </h3>
 <code> https://openweathermap.org/ </code>
 
