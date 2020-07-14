@@ -10,12 +10,12 @@
     {
       "src": "logo_gradiweb.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "104x129"
     },
     {
       "src": "logo_gradiweb.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "104x129"
     }
   ],
   "start_url": ".",
