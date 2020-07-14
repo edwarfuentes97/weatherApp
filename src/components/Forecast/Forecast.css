@@ -1,0 +1,292 @@
+.img_banner{
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 2rem;
+    height: 20em;
+    background: white;
+    box-shadow: 3px 3px 10px gray;
+}
+
+
+#grid {
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns:22% 22% 22% 25%;
+    grid-template-rows: 300px 300px;
+}
+
+.containers_data{
+    /* border: 1px solid gray;*/
+}
+
+#item4 {
+    margin-top: -8em;
+}
+
+.tittle_container_data {
+    font-weight: 200;
+    font-size: 1.4em;
+}
+
+.forecastContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    margin-top: 0.7em;
+    border-radius: 1em;
+    height: 4em;
+    vertical-align: middle;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.info_container{
+    width: 60%;
+    float: left;
+}
+
+.max_min_temp{
+    width: 35%;
+    float: left;
+    background: #7e7fe4;
+    border-radius: 1em;
+    height: 4.4em;
+    margin-top: -2px;
+    margin-left:10px;
+}
+
+.reset > p{
+    margin: 0;
+    padding: 0;
+}
+
+.icon_forecast{
+    width: 20%;
+    display: block;
+    margin: 15% 0 0 4%;
+    float: left;
+    padding-left: 3%;
+}
+
+.subData{
+    text-align: left;
+    padding-left: 37px !important;
+}
+
+.subData_1{
+    text-align: justify;
+    margin-top: 10px !important;
+}
+
+.subDatamin_max{
+    margin-top: 35%;
+    letter-spacing: -1px;
+}
+
+.img_visit{
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    box-shadow: 5px 5px 10px black;
+}
+
+.icon_location_paris{
+    position: absolute;
+    width: 2%;
+    margin:1em;
+}
+
+
+.text_location{
+    position: absolute;
+    margin-top: -17.5em;
+    color: white;
+    margin-left: 3em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+
+.text_location_2{
+    margin-top: -16em;;
+}
+
+.recomend1{
+    height: 5em;
+}
+.recomend2{
+    height: 10em;
+}
+.recomed{
+    margin: 1em 0;
+}
+.img_recomend{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 1em;
+    margin-top: 3.5em;
+    margin-bottom: 13em;
+    box-shadow: 5px 5px 10px black;
+}
+
+.icon_recomend{
+    position: absolute;
+    width: 1.7%;
+    margin: 15.2em 0.5em;
+}
+
+.icon_recomend_2{
+    position: absolute;
+    width: 1.7%;
+    margin: -1em 0.5em;
+}
+
+
+.text_recomed {
+    position: absolute;
+    margin-top: -22em;
+    color: white;
+    margin-left: 3em;
+    font-weight: 100;
+    text-shadow: 1px 1px 2px black;
+    font-size: 12px;
+}
+
+.text_recomed_2{
+    margin-top: -23.4em;
+}
+
+
+/* Estilo de las cards*/
+
+.info_card_cities{
+    vertical-align: middle;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    display: inline-block;
+}
+
+.add_location_city{
+    vertical-align: middle;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    display: inline-block;
+}
+
+.card_info_cities{
+    background: white !important;
+    border-radius: 1em;
+    margin-top: 1em;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+}
+
+.icon_cities_info{
+    width: 50%;
+    margin-top: 1em;
+}
+.txtHumedad{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.txtTittleHumedad{
+    font-size: 30px;
+    vertical-align: middle;
+    height: 10%;
+    margin-bottom: 56%;
+    margin-top: 23%;
+}
+
+.txtPreTittleHumedad{
+    font-size: 18px;
+}
+
+.icon_city_add{
+    width: 10em;
+    /* display: block; */
+    /* margin: auto; */
+    padding: 2em;
+}
+
+.btn_style{
+    white-space: pre;
+    padding: 7px 71%;
+    border-radius: 3em;
+    background: #d1d1ff;
+    color: #303582;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #7d7ee4;
+    margin: 15% 17%;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    #grid {
+        display: grid;
+        grid-gap: 3%;
+        grid-template-columns:100% ;
+        grid-template-rows: auto auto;
+    }
+
+    .main_container{
+        margin-top: 12em;
+        width: 80%;
+    }
+
+    .icon_forecast {
+        margin-top: 6px;
+    }
+
+    .subDatamin_max{
+        font-size: 2em;
+        margin-top: 10%;
+    }
+
+    .recomend1{
+        height: 6em;
+        margin-top: -5em;
+    }
+    .recomend2{
+        height: auto;
+    }
+
+    .btn_style{
+        padding: 1em 9em;
+    }
+
+    .icon_city_add{
+        width: 19em;
+    }
+
+
+    .icon_location_paris{
+        width: 10%;
+        margin-top: 14.5em;
+        margin-left: 1em;;
+    }
+
+    .icon_recomend_2{
+        width: 8%;
+        margin-left: 17em;
+        margin-top: -3em;
+    }
+
+    .icon_recomend{
+        width: 8%;
+        margin-left: 17em;
+        margin-top: 20em;
+    }
+
+    .text_location_2{
+        margin-left: 6em;
+    }
+    .text_location{
+        margin-left: 6em;
+    }
+}

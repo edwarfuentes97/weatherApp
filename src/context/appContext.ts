@@ -4,8 +4,15 @@ import { IUseApi } from '../hooks/useApi';
 
 
 const apiHook: IUseApi = {
-    getWeatherData:(city:string) => {},
-    homeData : [],
+    getWeatherData:() => {},
+    getForecastData:() => {},
+    getWeatherParisData:() => {},
+    getWeatherLyonData:() => {},
+    forecastData:[],
+    homeData: [],
+    parisData: [],
+    lyonData: []
+
 }
 
 export const appContext =  React.createContext({ ...apiHook});

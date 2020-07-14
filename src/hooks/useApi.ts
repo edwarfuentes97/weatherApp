@@ -1,25 +1,28 @@
 import { useState } from "react"
-// eslint-disable-netx-line
 
-//Interface de respuesta del api
+//Interface de respuesta del api para controlar acceso de datos al front
 type response = {
-    _index?: string,
-    _type?: string,
-    _id?: string,
-    _score?: any,
-    _source?: any,
-    sort?: any
+    main:any
 }
 
 export interface IUseApi {
-    getWeatherData:(city:string) => void,
-    homeData: any
+    getWeatherData:() => void,
+    getForecastData:() => void,
+    getWeatherParisData:() => void,
+    getWeatherLyonData:() => void,
+    forecastData:any
+    homeData: any,
+    parisData:any
+    lyonData:any
 }
 
 
 function useApi() {
 
     const [homeData, setHomeData] = useState([]);
+    const [forecastData, setForecastData] = useState([]);
+    const [parisData, setParisData] = useState([]);
+    const [lyonData, setLyonData] = useState([]);
     /**
      * Metodo para obtener datos del api
      */
@@ -31,14 +34,44 @@ function useApi() {
           });
     }
 
-    /*Metodo  para obtener los resultados de una busqueda*/
-    const getWeatherData = (city:string) => {
-        let ciudad =  city === 'bogota' ?  process.env["REACT_APP_CITY_ID_BOGOTA"] : process.env["REACT_APP_CITY_ID_PARIS"];
-
-        const url = `${process.env["REACT_APP_BASE"]}?id=${ciudad}&appid=${process.env["REACT_APP_API_KEY"]}`;
+    /*Metodo  para obtener los resultados de  weather*/
+    const getWeatherData = () => {
+        let ciudad = process.env["REACT_APP_CITY_ID_BOGOTA"]
+        const url = `${process.env["REACT_APP_BASE"]}?id=${ciudad}&appid=${process.env["REACT_APP_API_KEY"]}&lang=sp, es`;
         getData(url).then((data:any) => {
             if (data) {
                 setHomeData(data);
+            }
+        })
+    }
+
+    const getWeatherParisData = () => {
+        let ciudad = process.env["REACT_APP_CITY_ID_PARIS"];
+        const url = `${process.env["REACT_APP_BASE"]}?id=${ciudad}&appid=${process.env["REACT_APP_API_KEY"]}&lang=sp, es`;
+        getData(url).then((data:any) => {
+            if (data) {
+                setParisData(data)
+            }
+        })
+    }
+
+    const getWeatherLyonData = () => {
+        let ciudad = process.env["REACT_APP_CITY_ID_LYON"];
+        const url = `${process.env["REACT_APP_BASE"]}?id=${ciudad}&appid=${process.env["REACT_APP_API_KEY"]}&lang=sp, es`;
+        getData(url).then((data:any) => {
+            if (data) {
+                setLyonData(data)
+            }
+        })
+    }
+
+    /*Metodo  para obtener los resultados de FORECAST */
+    const getForecastData = () => {
+        let ciudad =  process.env["REACT_APP_CITY_ID_BOGOTA"] ;
+        const url = `${process.env["REACT_APP_BASE_FORECAST"]}?id=${ciudad}&appid=${process.env["REACT_APP_API_KEY"]}&lang=sp, es`;
+        getData(url).then((data:any) => {
+            if (data) {
+                setForecastData(data);
             }
         })
     }
@@ -47,6 +80,12 @@ function useApi() {
     return {
         getWeatherData,
         homeData,
+        getForecastData,
+        getWeatherParisData,
+        getWeatherLyonData,
+        forecastData,
+        parisData,
+        lyonData
     }
 }
 

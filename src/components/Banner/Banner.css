@@ -1,0 +1,78 @@
+.img_banner{
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 2rem;
+    height: 20em;
+    background: white;
+    box-shadow: 3px 3px 10px gray;
+    object-fit: cover;
+}
+
+.city_name{
+    color: white;
+    font-size: 2em;
+    margin-top: 2em;
+    position: absolute;
+    margin-left: 4em;
+    text-shadow: 1px 1px 2px black;
+}
+
+.logo_gradi{
+    top: 20%;
+    right: 18%;
+    position: absolute;
+}
+
+@media (max-width: 800px) {
+
+    .img_banner {
+        display: block;
+        margin: auto;
+        width: 100%;
+        border-radius: 2rem;
+        height: 20em;
+        background: white;
+        box-shadow: 3px 3px 10px grey;
+        position: initial;
+    }
+    .container_main_weater{
+        width: 100%;
+        top: 0;
+        z-index: 99;
+    }
+    .icon{
+        width: 10%;
+        display: block;
+        margin: auto;
+        padding-top:0.5em ;
+    }
+
+    .logo_gradi {
+        display: block;
+        margin: auto;
+        left: 20%;
+        top: 30px;
+    }
+
+    .main_container_2{
+        margin-top: 18em;
+    }
+
+    .logo_gradi{
+        top: 50%;
+        right: 18%;
+        position: absolute;
+    }
+
+    .city_name{
+        color: white;
+        font-size: 2em;
+        margin-top: 2em;
+        position: absolute;
+        margin-left: 4.5em;
+        text-shadow: 1px 1px 2px black;
+    }
+
+
+}
