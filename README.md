@@ -24,15 +24,15 @@
 <h4> Key from Bogota </h4>
 <p>
   {
-    "id": 5095808,
-    "name": "Bogota",
-    "state": "NJ",
-    "country": "US",
+    "id": 3688689,
+    "name": "Bogotá",
+    "state": "",
+    "country": "CO",
     "coord": {
-      "lon": -74.029861,
-      "lat": 40.876209
+      "lon": -74.081749,
+      "lat": 4.60971
     }
-  }
+  },
  </p>
 <hr/> 
 <h4> Key from Paris </h4>
